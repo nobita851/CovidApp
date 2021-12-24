@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import MatDataTable from "./MatDataTable";
+import coronaImages from "./new.jpg";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    const spacing = 5;
+    return (
+      <div className="App">
+        <img src={coronaImages} alt="COVID-19" />
+        <h2>Statistical Data</h2>
+        <MatDataTable />
+      </div>
+    );
+  }
 }
 
 export default App;
